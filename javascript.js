@@ -14,7 +14,17 @@ function multiply(a, b) {
     return a * b;
 }
 
-console.log(add(6, 9),
-subtract(8, 9),
-divide(3, 3),
-multiply(2, 9))
+const operate = function(a, b, operator) {
+    if (operator === '+') {
+        add(a, b);
+    }
+    else if (operator === '-') {
+        subtract(a, b);
+    }
+    else if (operator === '*') {
+        multiply(a, b);
+    }
+    else if (operator === '/') {
+        divide(a, b);
+    }
+}
