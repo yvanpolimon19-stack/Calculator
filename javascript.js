@@ -44,6 +44,9 @@ const operate = function(a, b, operator) {
         return multiply(a, b);
     }
     else if (operator === '/') {
+        if ( b === 0 ) {
+            return "Math Error"
+        }
         return divide(a, b);
     }
 }
@@ -64,6 +67,15 @@ const handleClick = function (e) {
 
         display.textContent = operate(firstNumber, secondNumber, operator)       
         
+    }
+    else if ( buttonContent === "clear") {
+        display.textContent = '';
+    }
+    else if ( buttonContent === "AC" ) {
+        display.textContent = '';
+        operator = null;
+        firstNumber = null;
+        secondNumber = null;
     }
 }
 
