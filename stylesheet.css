@@ -1,0 +1,15 @@
+.calculator{
+    height: 90%;
+    width: 70%;
+}
+.row{
+    width: 100%;
+}
+.button{
+    width: 24%;
+}
+#display{
+    height: 2em;
+    width: 98%;
+    border: 1px solid black;
+}

@@ -4,35 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
+    
+    <link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
-    <div class="row">
-        <button>7</button>
-         <button>8</button>
-          <button>9</button>
-           <button>/</button>        
+    <div class="calculator">
+
+        <div class="row" id="display"> </div>
+        <div class="row">
+            <button class= "button digit">7</button>
+            <button class="digit button">8</button>
+            <button class="digit button">9</button>
+            <button class="operator button">/</button>        
+        </div>
+        <div class="row">
+            <button class="digit button">4</button>
+            <button class="digit button">5</button>
+            <button class="digit button">6</button>
+            <button class="operator button">*</button>        
+        </div>
+        <div class="row">
+            <button class="digit button">1</button>
+            <button class="digit button">2</button>
+            <button class="digit button">3</button>
+            <button class="operator button">+</button>        
+        </div>
+        <div class="row">
+            <button class="button" style="width: 7%;">AC</button>
+            <button class="digit button" style="width: 30%;">0</button>
+            <button class="button" style="width: 30%;">.</button>
+            <button class="operator button" style="width: 30%;">-</button>        
+        </div>
+        <div class="lastRow">
+            <button id="equal" class="button" style="width: 30%;">=</button>
+            <button class="button" style="width: 69%;">clear</button>
+        </div>
     </div>
-    <div class="row">
-        <button>4</button>
-         <button>5</button>
-          <button>6</button>
-           <button>*</button>        
-    </div>
-    <div class="row">
-        <button>1</button>
-         <button>2</button>
-          <button>3</button>
-           <button>+</button>        
-    </div>
-    <div class="row">
-        <button>AC</button>
-         <button>0</button>
-          <button>.</button>
-           <button>-</button>        
-    </div>
-    <div class="lastRow">
-        <button>=</button>
-    </div>
-    
+    <script src="javascript.js"></script>
 </body>
 </html>
