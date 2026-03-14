@@ -1,15 +1,32 @@
-.calculator{
-    height: 90%;
-    width: 70%;
+body{
+    width: 40vw;
+    height: 50vh;
 }
-.row{
+.calculator{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     width: 100%;
+    padding-bottom: 0%;
+    margin: auto;
 }
 .button{
     width: 24%;
+    height: 100%;
+}
+.row{
+    height: 15%;
+}
+.lastRow {
+    height: 15%;
 }
 #display{
-    height: 2em;
-    width: 98%;
     border: 1px solid black;
+    height: 10%;
+    width: 99.4%;
+    vertical-align: center;
+}
+.backspace{
+    height: 100%;
+    width:100%;
 }

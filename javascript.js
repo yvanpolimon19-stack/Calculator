@@ -8,6 +8,9 @@ const operatorsArr = [];
 let operator;
 let firstNumber;
 let secondNumber;
+const decimalButton = document.querySelector(".decimal");
+let result;
+const backButton = document.querySelector(".backspace");
 
 for (let i = 0; i < operators.length; i ++) {
     operatorsArr[i] = operators[i].textContent;
@@ -54,18 +57,29 @@ const operate = function(a, b, operator) {
 const handleClick = function (e) {
     const buttonContent = e.target.textContent;
     if(operatorsArr.includes(buttonContent)) {
-        firstNumber = parseInt(display.textContent);
-        operator = buttonContent;
-        display.textContent = '';
+        if ( display.textContent != '') {
+            firstNumber = parseFloat(display.textContent);
+            operator = buttonContent;
+            display.textContent = '';
+        }
     }
+
     else if (digitsArr.includes(buttonContent)) {
-        display.textContent += buttonContent;
+        if ( display.textContent == result){
+            display.textContent = buttonContent;
+        }
+        else{
+            display.textContent += buttonContent;
+        }
+        
     }
+
     else if (buttonContent === equalBtn.textContent) {
         
-        secondNumber = parseInt(display.textContent);
+        secondNumber = parseFloat(display.textContent);
 
-        display.textContent = operate(firstNumber, secondNumber, operator)       
+        result = operate(firstNumber, secondNumber, operator);
+        display.textContent = result;       
         
     }
     else if ( buttonContent === "clear") {
@@ -76,6 +90,18 @@ const handleClick = function (e) {
         operator = null;
         firstNumber = null;
         secondNumber = null;
+    }
+    else if (buttonContent === ".") {
+        if ( display.textContent.includes('.')){
+            display.textContent += '';
+        }
+        else{
+            display.textContent += '.';
+        }
+    }
+    else if (buttonContent === "Backspace") {
+
+        display.textContent = display.textContent.slice(0, -1);
     }
 }
 
