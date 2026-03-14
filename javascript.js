@@ -69,6 +69,7 @@ const handleClick = function (e) {
     else if (digitsArr.includes(buttonContent)) {
         if ( display.textContent == result){
             display.textContent = buttonContent;
+            innerDisplay.textContent = '';
         }
         else{
             display.textContent += buttonContent;
