@@ -1,6 +1,7 @@
 body{
     width: 40vw;
     height: 50vh;
+    margin: auto;
 }
 .calculator{
     display: flex;
@@ -13,6 +14,7 @@ body{
 .button{
     width: 24%;
     height: 100%;
+    font-size: 1.5em;
 }
 .row{
     height: 15%;
@@ -23,10 +25,24 @@ body{
 #display{
     border: 1px solid black;
     height: 10%;
-    width: 99.4%;
+    width: 97.4%;
     vertical-align: center;
+    border-top: 0px;
+    font-size: 1.5em;
+    text-align: right;
+    padding-right: 2%;
 }
 .backspace{
     height: 100%;
     width:100%;
+
+}
+#innerDisplay{
+    border: 1px solid black;
+    height: 5%;
+    border-bottom: 0px;
+    font-size: 1em;
+    width: 94.4%;
+    text-align: right;
+    padding-right: 5%;
 }

@@ -1,4 +1,5 @@
 const display = document.getElementById("display");
+const innerDisplay = document.getElementById("innerDisplay");
 const digits = document.querySelectorAll(".digit");
 const operators = document.querySelectorAll(".operator");
 const buttons = document.querySelectorAll(".button");
@@ -61,6 +62,7 @@ const handleClick = function (e) {
             firstNumber = parseFloat(display.textContent);
             operator = buttonContent;
             display.textContent = '';
+            innerDisplay.textContent = firstNumber + " " + operator + " ";
         }
     }
 
@@ -77,6 +79,7 @@ const handleClick = function (e) {
     else if (buttonContent === equalBtn.textContent) {
         
         secondNumber = parseFloat(display.textContent);
+        innerDisplay.textContent += secondNumber;
 
         result = operate(firstNumber, secondNumber, operator);
         display.textContent = result;       
@@ -87,6 +90,7 @@ const handleClick = function (e) {
     }
     else if ( buttonContent === "AC" ) {
         display.textContent = '';
+        innerDisplay.textContent = '';
         operator = null;
         firstNumber = null;
         secondNumber = null;
